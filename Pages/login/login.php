@@ -34,7 +34,6 @@ session_start();
             cursor: pointer;
             margin-bottom: 30px;
             margin-top: 15px;
-            /* Added margin-top to separate it from the message */
         }
     </style>
 
