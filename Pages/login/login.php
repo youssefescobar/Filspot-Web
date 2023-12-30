@@ -11,9 +11,11 @@ session_start();
     <style>
         .message {
             color: white;
-            padding: 10px;
+            padding: 0px;
             margin-bottom: 15px;
+            font size: 35px;
             border-radius: 6px;
+            text-align: center;
         }
 
         .jsbutton {
@@ -35,6 +37,16 @@ session_start();
             margin-bottom: 30px;
             margin-top: 15px;
         }
+
+        .output {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+            padding-left: 720px;
+            font-size: 25px;
+            font-weight: 600;
+        }
     </style>
 
 </head>
@@ -52,16 +64,14 @@ session_start();
             $row = mysqli_fetch_assoc($result);
 
             if (is_array($row) && !empty($row)) {
-                $_SESSION['valid'] = $row['email'];
-                $_SESSION['username'] = $row['username'];
-                $_SESSION['id'] = $row['Id'];
                 header("Location: ../../index.html");
                 exit();
             } else {
-                echo "<div class='message'>
+                echo "<div class='output'><div class='message'>
                      <p>Wrong Username or Password</p>
-                      </div> <br>";
-                echo "<a href='login.php'><button class='jsbutton'>Go Back</button></a>";
+                      </div> <br>
+                      </div>    ";
+                echo "<div class='output'><a href='login.php'><button class='jsbutton'>Go Back</button></a></div>";
             }
         } else {
             ?>
@@ -78,6 +88,7 @@ session_start();
                 <input class="inp_login" type="submit" name="login_button" value="Login">
                 <p class="para1">Don't have an account? <a class="sign_up" href="../register/reg.php" alt="error">Sign
                         up!</a></p>
+
             </form>
         <?php } ?>
     </div>

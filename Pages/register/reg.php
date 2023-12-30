@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <title>Registration Form</title>
     <link rel="stylesheet" href="reg.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="../../public/filspot.ico" type="image/x-icon">
     <style>
         .message {
@@ -80,7 +79,10 @@
                         <input class="inline" id="terms-and-conditions" type="checkbox" required
                             name="terms-and-conditions" />I accept the <a href="#"
                             onclick="window.alert('والله هديكم اكتر من 10 درجات (انت حلفت ههه)')">terms and conditions</a>
+
                     </p>
+                    <p style="color:white;">Have an account? <a class="sign_up" href="../login/login.php" alt="error">Sign
+                            in!</a></p>
                 </label>
                 <br><br>
                 <input class="inpbutton" type="submit" name="signup" value="Sign Up">
